@@ -1,5 +1,7 @@
 # J Bake Co.
 
+**Live:** <https://julianas-bakery.netlify.app> · **Repo:** <https://github.com/parkerwillis1/julianas-bakery>
+
 Static multi-page site for a custom cake design studio. Plain HTML, CSS, and
 vanilla JS — no framework, no build step. The files you see are the files that
 get served.
