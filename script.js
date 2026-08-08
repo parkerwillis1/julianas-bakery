@@ -30,18 +30,26 @@
   }
 
   /* ---------- Active nav state ----------
-     The markup already ships with .is-active, but this keeps things correct
-     if a page is reached as "/" or "/designs" rather than "/designs.html". */
+     The markup already ships with .is-active, but the page can be reached as
+     "/designs", "/designs.html" or "/designs/", and hosts that serve pretty
+     URLs (Netlify does) rewrite href="designs.html" to href="/designs". So
+     reduce both sides to a bare page key before comparing. */
+  function pageKey(path) {
+    // drop query/hash, then any trailing slash so "/about/" reads as "about"
+    var clean = String(path).split("?")[0].split("#")[0].replace(/\/+$/, "");
+    var last = clean.split("/").pop();
+    if (!last) return "index"; // "" or "/"
+    return last.replace(/\.html$/, "");
+  }
+
   function initActiveNav() {
-    var file = window.location.pathname.split("/").pop() || "index.html";
-    if (file.indexOf(".") === -1) file += ".html";
+    var here = pageKey(window.location.pathname);
 
     var links = document.querySelectorAll(".nav__link");
     var matched = false;
 
     links.forEach(function (link) {
-      var href = link.getAttribute("href");
-      var isMatch = href === file;
+      var isMatch = pageKey(link.getAttribute("href")) === here;
       link.classList.toggle("is-active", isMatch);
       if (isMatch) {
         link.setAttribute("aria-current", "page");
