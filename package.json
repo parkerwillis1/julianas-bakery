@@ -2,7 +2,7 @@
   "name": "julianas-bakery",
   "version": "1.0.0",
   "private": true,
-  "description": "J Bake Co. — static multi-page site for a custom cake design studio",
+  "description": "J Bake Co. static multi-page site for a custom cake design practice",
   "scripts": {
     "dev": "serve . -l 5176"
   },
