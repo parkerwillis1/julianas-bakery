@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — J Bake Co.</title>
+  <meta name="description" content="Start a custom cake order with J Bake Co. Tell us about your event and we'll be in touch within two business days.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lora:wght@400;500&family=Pinyon+Script&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="wordmark" href="index.html" aria-label="J Bake Co. home">
+        <span class="wordmark__j" aria-hidden="true">J</span>
+        <span class="wordmark__name">Bake Co.</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="nav__links" id="nav-links">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="designs.html">Cake Designs</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link is-active" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================= PAGE HEAD ========================= -->
+    <section class="page-head">
+      <div class="wrap reveal">
+        <p class="label">Order Inquiries</p>
+        <h1 class="headline">Let's make <span class="script-accent">something</span></h1>
+        <hr class="rule--short" style="margin-inline:auto;">
+        <p class="subline" style="margin-inline:auto;">
+          Tell us a little about the day. We take a small number of cakes each week,
+          so the earlier you write, the better — but ask anyway.
+        </p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ======================== CONTACT + FORM ======================== -->
+    <section class="section">
+      <div class="wrap contact">
+
+        <aside class="contact__aside reveal">
+          <p class="flourish" aria-hidden="true">Say hello</p>
+
+          <div class="contact__detail">
+            <span>Email</span>
+            <a href="mailto:hello@jbakeco.com">hello@jbakeco.com</a>
+          </div>
+          <div class="contact__detail">
+            <span>Phone</span>
+            <a href="tel:+15125550148">(512) 555-0148</a>
+          </div>
+
+          <hr class="rule">
+
+          <div class="contact__detail">
+            <span>Studio</span>
+            118 Linen Street<br>Austin, TX 78704
+          </div>
+          <div class="contact__detail">
+            <span>Hours</span>
+            Tue&ndash;Fri 10&ndash;5<br>Sat 10&ndash;2<br>Consults by appointment
+          </div>
+
+          <hr class="rule">
+
+          <div class="contact__detail">
+            <span>Lead time</span>
+            Four weeks for tiered cakes,<br>two weeks for everything else
+          </div>
+        </aside>
+
+        <div class="reveal">
+          <!--
+            No backend: submission is intercepted in script.js and swapped for the
+            thank-you panel below.
+
+            TODO: to wire this up for real, sign up at https://formspree.io, then
+            set the form's action + method here and remove the interceptor guard:
+
+              <form class="form" id="order-form"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST">
+
+            script.js checks for a real `action` and lets the browser submit
+            normally when one is present.
+          -->
+          <form class="form" id="order-form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Juliana Reyes" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(512) 555-0148">
+              </div>
+              <div class="field">
+                <label for="event-date">Event date</label>
+                <input type="date" id="event-date" name="event_date">
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="cake-type">Cake type</label>
+                <select id="cake-type" name="cake_type">
+                  <option value="Wedding">Wedding</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Custom">Custom</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="servings">Servings</label>
+                <input type="number" id="servings" name="servings" min="1" step="1" placeholder="40">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Tell us about it</label>
+              <textarea id="message" name="message" placeholder="Colours, flavours, the venue, anything you've already pinned…"></textarea>
+            </div>
+
+            <button class="btn" type="submit">Send Inquiry</button>
+            <p class="form__note">We reply to every inquiry within two business days.</p>
+          </form>
+
+          <!-- Swapped in on submit -->
+          <div class="thanks" id="order-thanks" hidden tabindex="-1">
+            <p class="thanks__mark" aria-hidden="true">J</p>
+            <h2>Thank <span class="script-accent">you</span></h2>
+            <hr class="rule--short" style="margin-inline:auto;">
+            <p>
+              Your inquiry is in. Juliana reads every one personally and will be back
+              to you within two business days — usually with a question or two about
+              flavour.
+            </p>
+            <a class="arrow-link" href="designs.html">Browse cake designs <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== BORDEAUX VALUES BAND ==================== -->
+    <section class="band">
+      <div class="wrap reveal">
+        <ul class="band__list">
+          <li>Artisanal</li>
+          <li>Intentional</li>
+          <li>Timeless</li>
+          <li>Modern</li>
+        </ul>
+        <a class="btn btn--cream" href="designs.html">See Our Cakes</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="wordmark">
+            <span class="wordmark__j" aria-hidden="true">J</span>
+            <span class="wordmark__name">Bake Co.</span>
+          </span>
+          <p class="footer__tagline">Custom cake design studio. Made to order, one week at a time.</p>
+          <div class="footer__badge">
+            <svg class="monogram monogram--light" viewBox="0 0 120 120" width="86" height="86" role="img" aria-label="J Bake Co. monogram">
+              <defs>
+                <path id="mono-curve-footer" d="M 19,60 a 41,33 0 1,1 82,0 a 41,33 0 1,1 -82,0"></path>
+              </defs>
+              <ellipse class="monogram__ring" cx="60" cy="60" rx="55" ry="47" stroke-width="1"></ellipse>
+              <ellipse class="monogram__ring" cx="60" cy="60" rx="50" ry="42" stroke-width="0.6"></ellipse>
+              <text class="monogram__curve">
+                <textPath href="#mono-curve-footer" startOffset="25%" text-anchor="middle">J BAKE CO.</textPath>
+              </text>
+              <text class="monogram__j" x="60" y="78" text-anchor="middle" font-size="44">J</text>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Visit</h3>
+          <ul class="footer__list">
+            <li>118 Linen Street</li>
+            <li>Austin, TX 78704</li>
+            <li><a href="tel:+15125550148">(512) 555-0148</a></li>
+            <li><a href="mailto:hello@jbakeco.com">hello@jbakeco.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Hours</h3>
+          <ul class="footer__list">
+            <li>Tue &ndash; Fri &nbsp;10&ndash;5</li>
+            <li>Saturday &nbsp;10&ndash;2</li>
+            <li>Sun &amp; Mon &nbsp;Closed</li>
+            <li>Consults by appointment</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Follow</h3>
+          <ul class="footer__list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="contact.html">Order Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> J Bake Co.</span>
+        <span>Made to order in Austin, Texas</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

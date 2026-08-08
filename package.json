@@ -1,0 +1,12 @@
+{
+  "name": "julianas-bakery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "J Bake Co. — static multi-page site for a custom cake design studio",
+  "scripts": {
+    "dev": "serve . -l 5176"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

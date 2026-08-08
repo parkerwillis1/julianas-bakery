@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>J Bake Co. — Custom Cake Design Studio</title>
+  <meta name="description" content="J Bake Co. is a custom cake design studio by Juliana. Artisanal, intentional, timeless, modern cakes made to order.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lora:wght@400;500&family=Pinyon+Script&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <!-- Wordmark: script J stacked over letterspaced BAKE CO. -->
+      <a class="wordmark" href="index.html" aria-label="J Bake Co. home">
+        <span class="wordmark__j" aria-hidden="true">J</span>
+        <span class="wordmark__name">Bake Co.</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="nav__links" id="nav-links">
+          <li><a class="nav__link is-active" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="designs.html">Cake Designs</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy reveal">
+          <p class="label">Custom Cake Design Studio</p>
+          <h1 class="headline hero__headline">
+            Cakes made<br>
+            with <span class="script-accent">intention</span>
+          </h1>
+          <p class="subline">
+            Every cake at J Bake Co. begins as a conversation — about the room, the
+            season, the people around the table — and ends as something quietly
+            unforgettable.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="designs.html">See Our Cakes</a>
+            <a class="arrow-link" href="contact.html">Start an order <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <!-- Monogram badge parked in the hero corner -->
+          <div class="hero__badge">
+            <svg class="monogram" viewBox="0 0 120 120" width="100%" height="100%" role="img" aria-label="J Bake Co. monogram">
+              <defs>
+                <path id="mono-curve-hero" d="M 19,60 a 41,33 0 1,1 82,0 a 41,33 0 1,1 -82,0"></path>
+              </defs>
+              <ellipse class="monogram__plate" cx="60" cy="60" rx="55" ry="47"></ellipse>
+              <ellipse class="monogram__ring" cx="60" cy="60" rx="55" ry="47" stroke-width="1"></ellipse>
+              <ellipse class="monogram__ring" cx="60" cy="60" rx="50" ry="42" stroke-width="0.6"></ellipse>
+              <text class="monogram__curve">
+                <textPath href="#mono-curve-hero" startOffset="25%" text-anchor="middle">J BAKE CO.</textPath>
+              </text>
+              <text class="monogram__j" x="60" y="78" text-anchor="middle" font-size="44">J</text>
+            </svg>
+          </div>
+
+          <img class="hero__photo"
+               src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1000&q=80"
+               alt="A tall tiered cake in cream buttercream on a linen-draped table"
+               width="1000" height="1333">
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ====================== SIGNATURE CAKES ====================== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="center reveal" style="margin-bottom: clamp(2rem, 4vw, 3.25rem);">
+          <p class="label">Selected Work</p>
+          <h2 class="headline">Our <span class="script-accent">signature</span> cakes</h2>
+          <hr class="rule--short">
+          <p class="subline">Three house styles we return to again and again — each one made to order.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80"
+                   alt="A smooth buttercream tiered wedding cake" loading="lazy" width="800" height="1000">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Tiered &amp; Timeless</h3>
+              <p class="card__text">Clean buttercream tiers, sugared blooms, and nothing that shouts. Built for long tables and long marriages.</p>
+              <a class="arrow-link" href="designs.html">See more <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1568827999250-3f6afff96e66?auto=format&fit=crop&w=800&q=80"
+                   alt="A semi-naked cream cake trimmed with fresh strawberries and daisies" loading="lazy" width="800" height="1000">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Fruit &amp; Season</h3>
+              <p class="card__text">Cherries in June, figs in November. Whatever is best that week goes on top, and nothing else needs to.</p>
+              <a class="arrow-link" href="designs.html">See more <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?auto=format&fit=crop&w=800&q=80"
+                   alt="A small single-layer cake finished in soft cocoa buttercream on a cream plate" loading="lazy" width="800" height="1000">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Small &amp; Complete</h3>
+              <p class="card__text">Six inches, one flavour, done properly. The cake for a Tuesday that turned out to matter.</p>
+              <a class="arrow-link" href="designs.html">See more <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= OUR STORY TEASER ======================= -->
+    <section class="section section--oat">
+      <div class="wrap story">
+        <div class="reveal">
+          <img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=900&q=80"
+               alt="Hands working dough on a floured counter beside a linen towel" loading="lazy"
+               style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 2px;">
+        </div>
+        <div class="story__copy reveal">
+          <p class="flourish" aria-hidden="true">Our story</p>
+          <h2 class="headline" style="font-size: clamp(2rem, 4.2vw, 3rem);">
+            A studio built on <span class="script-accent">patience</span>
+          </h2>
+          <hr class="rule--short">
+          <p>
+            J Bake Co. started in a small kitchen with one oven, a stack of borrowed
+            tins, and a stubborn belief that a cake should taste as considered as it
+            looks. Juliana still bakes every order herself.
+          </p>
+          <p>
+            We take a handful of cakes each week — never more — so that each one gets
+            the attention it was ordered for.
+          </p>
+          <a class="arrow-link" href="about.html">Meet Juliana <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BORDEAUX VALUES BAND ==================== -->
+    <section class="band">
+      <div class="wrap reveal">
+        <ul class="band__list">
+          <li>Artisanal</li>
+          <li>Intentional</li>
+          <li>Timeless</li>
+          <li>Modern</li>
+        </ul>
+        <a class="btn btn--cream" href="contact.html">Order a Cake</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="wordmark">
+            <span class="wordmark__j" aria-hidden="true">J</span>
+            <span class="wordmark__name">Bake Co.</span>
+          </span>
+          <p class="footer__tagline">Custom cake design studio. Made to order, one week at a time.</p>
+          <div class="footer__badge">
+            <svg class="monogram monogram--light" viewBox="0 0 120 120" width="86" height="86" role="img" aria-label="J Bake Co. monogram">
+              <defs>
+                <path id="mono-curve-footer" d="M 19,60 a 41,33 0 1,1 82,0 a 41,33 0 1,1 -82,0"></path>
+              </defs>
+              <ellipse class="monogram__ring" cx="60" cy="60" rx="55" ry="47" stroke-width="1"></ellipse>
+              <ellipse class="monogram__ring" cx="60" cy="60" rx="50" ry="42" stroke-width="0.6"></ellipse>
+              <text class="monogram__curve">
+                <textPath href="#mono-curve-footer" startOffset="25%" text-anchor="middle">J BAKE CO.</textPath>
+              </text>
+              <text class="monogram__j" x="60" y="78" text-anchor="middle" font-size="44">J</text>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Visit</h3>
+          <ul class="footer__list">
+            <li>118 Linen Street</li>
+            <li>Austin, TX 78704</li>
+            <li><a href="tel:+15125550148">(512) 555-0148</a></li>
+            <li><a href="mailto:hello@jbakeco.com">hello@jbakeco.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Hours</h3>
+          <ul class="footer__list">
+            <li>Tue &ndash; Fri &nbsp;10&ndash;5</li>
+            <li>Saturday &nbsp;10&ndash;2</li>
+            <li>Sun &amp; Mon &nbsp;Closed</li>
+            <li>Consults by appointment</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Follow</h3>
+          <ul class="footer__list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener">Pinterest</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="contact.html">Order Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> J Bake Co.</span>
+        <span>Made to order in Austin, Texas</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
