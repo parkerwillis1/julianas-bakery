@@ -37,17 +37,17 @@ Two steps, no code beyond one object.
 
 ```js
 {
-  title:       "Rose Ombre Tier",
-  description: "Three tiers in blush buttercream with hand-piped roses.",
+  title:       "Lemon & Poppy",
+  description: "A single tier in lemon buttercream with a poppy seed crumb.",
   date:        "2026-08-01",              // YYYY-MM-DD — the grid sorts by this
-  image:       "images/rose-ombre-tier.jpg",
-  tags:        ["Wedding"]                // Wedding · Birthday · Seasonal
+  image:       "images/lemon-poppy.jpg",
+  tags:        ["Birthday"]               // Birthday · Celebration · Seasonal
 },
 ```
 
 Position in the array doesn't matter — the page sorts newest first by `date`.
 `tags` drives the filter buttons, and a cake can carry more than one:
-`["Wedding", "Seasonal"]`. Commit and push, and it's live.
+`["Birthday", "Seasonal"]`. Commit and push, and it's live.
 
 The six seed cakes point at Unsplash URLs as placeholders. Swap them for local
 `images/…` paths as real photos come in.

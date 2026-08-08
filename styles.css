@@ -323,7 +323,8 @@ p { margin: 0 0 1.15em; }
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 6vw, 5rem);
   align-items: center;
-  padding-block: clamp(3rem, 7vw, 6rem);
+  /* kept tight so the whole hero sits above the fold on a laptop */
+  padding-block: clamp(2rem, 4.5vw, 3.5rem);
 }
 
 .hero__copy { max-width: 34rem; }
@@ -341,11 +342,10 @@ p { margin: 0 0 1.15em; }
 
 .hero__photo {
   width: 100%;
-  /* height:auto is required — the img's height attribute is a presentational
-     hint, and without this it wins over aspect-ratio and stretches the crop */
-  height: auto;
-  /* tall portrait crop */
-  aspect-ratio: 3 / 4;
+  /* A viewport-relative height rather than a tall portrait ratio, so the hero
+     never grows past the fold. Explicit height also overrides the img's height
+     attribute, which is a presentational hint and would otherwise win. */
+  height: clamp(300px, 46vh, 460px);
   object-fit: cover;
   border-radius: var(--radius);
 }
@@ -825,7 +825,7 @@ p { margin: 0 0 1.15em; }
   .contact { grid-template-columns: 1fr; }
 
   .hero__media { order: -1; }
-  .hero__photo { aspect-ratio: 4 / 3; }
+  .hero__photo { height: clamp(240px, 34vh, 340px); }
   .hero__badge { width: 92px; height: 92px; top: -14px; left: -10px; }
 
   .about__badge { right: 8px; bottom: -20px; width: 88px; height: 88px; }
